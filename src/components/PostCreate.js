@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 
 class PostCreate extends React.Component{
     render(){
@@ -7,3 +7,5 @@ class PostCreate extends React.Component{
         )
     }
 }
+
+export default PostCreate
