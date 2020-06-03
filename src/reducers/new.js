@@ -1,7 +1,7 @@
 import { combineReducers } from "redux";
 
 const rootReducer=combineReducers({
-    
+    Posts:Add
 })
 export default rootReducer
 
