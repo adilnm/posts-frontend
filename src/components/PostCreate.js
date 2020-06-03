@@ -5,20 +5,24 @@ import newPost from "../actions/newPost";
 class PostCreate extends React.Component {
   state = {
     title: "",
-    body: "",
-    published: false
+    body: ""
   };
 
   handleChange = e => {
     this.setState({
-        [e.target.name]:e.target.value
+      [e.target.name]: e.target.value
     });
+  };
+
+  handleSubmit = e => {
+      e.preventDefault()
+      this.props.newPost(this.state)
   };
 
   render() {
     return (
       <div>
-        <form>
+        <form onSubmit={this.handleSubmit}>
           <input
             onChange={this.handleChange}
             type="text"
