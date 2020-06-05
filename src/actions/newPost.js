@@ -5,12 +5,12 @@ export default function(post) {
       credentials: "include",
       headers: {
         "Content-Type": "application/json",
-        Accept: "application/json"
+        "Accept": "application/json"
       },
-      body: JSON.stringify(post)
+      body: JSON.stringify({post})
     })
       .then(res => res.json())
-      .then(posts => {
+      .then(post => {
         dispatch({
           type: "CREATE-POST",
           payload: post
