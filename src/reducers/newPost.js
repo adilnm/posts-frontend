@@ -1,11 +1,11 @@
 import { combineReducers } from "redux";
 
 const rootReducer=combineReducers({
-    Posts:Add
+    posts:Add
 })
 export default rootReducer
 
-function Add(state=[],action){
+function Add(state=null,action){
     switch (action.type) {
         case 'LOAD-POSTS':
             return action.payload
