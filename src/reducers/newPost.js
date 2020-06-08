@@ -13,3 +13,9 @@ function Add(state=[],action){
            return state
     }
 }
+
+// function Posts(state=[], action){
+//     switch (action.type){
+//         case ''
+//     }
+// }
