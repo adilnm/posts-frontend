@@ -8,6 +8,8 @@ export default function() {
       }
     })
     .then(res=>res.json())
-    
+    .then(posts=>{
+        console.log(posts)
+    })
   };
 }

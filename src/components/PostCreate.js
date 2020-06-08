@@ -32,7 +32,7 @@ class PostCreate extends React.Component {
           <br />
           <textarea
             onChange={this.handleChange}
-            name="content"
+            name="body"
             id=""
             cols="30"
             rows="10"

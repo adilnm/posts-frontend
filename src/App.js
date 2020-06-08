@@ -2,8 +2,14 @@ import React from "react";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import PostCreate from "./components/PostCreate";
 import PostDisplay from "./components/PostDisplay";
+import loadPosts from "./actions/loadPosts";
+import { connect } from "react-redux";
 
 class App extends React.Component {
+
+  componentDidMount(){
+    this.props.loadPosts()
+  }
   render() {
     return (
       <Router>
@@ -16,4 +22,4 @@ class App extends React.Component {
   }
 }
 
-export default App;
+export default connect(null,{loadPosts})(App);
