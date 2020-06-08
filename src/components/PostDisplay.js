@@ -1,4 +1,5 @@
 import React from 'react'
+import { connect } from "react-redux";
 
 class PostDisplay extends React.Component{
     render(){
@@ -10,4 +11,10 @@ class PostDisplay extends React.Component{
     }
 }
 
-export default  PostDisplay
+const mstp=state=>{
+    return{
+        posts:state.posts
+    }
+}
+
+export default  connect(mstp)(PostDisplay)
